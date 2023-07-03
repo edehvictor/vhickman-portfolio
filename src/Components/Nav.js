@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import DataContext from '../context/DataContext'
@@ -8,13 +7,12 @@ import { signOut } from 'firebase/auth'
 
 const Nav = () => {
     const { search, setSearch } = useContext(DataContext);
-    const [first, setfirst] = useState(true)
+
+    const user = auth?.currentUser
 
     const logOut = async () => {
         try {
-            setfirst(true)
             await signOut(auth)
-            setfirst(false)
         } catch (error) {
             console.log(error)
         }
@@ -37,7 +35,7 @@ const Nav = () => {
                 <li><Link to="/">Home </Link></li>
                 <li><Link to="post">Post</Link></li>
                 <li><Link to="about">About</Link></li>
-                {!first ? <li><Link to="login">Login</Link></li> : <li><Link onClick={logOut}>Logout</Link></li>
+                {!user ? <li><Link to="login">Login</Link></li> : <li><Link onClick={logOut}>Logout</Link></li>
                 }
             </ul>
         </nav>

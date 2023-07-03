@@ -111,7 +111,7 @@ function App() {
   return (
     <div className="App">
       <Header
-        title="Vhickman blog"
+        title="Vickman Blog"
       />
       <DataProvider>
         <Nav />

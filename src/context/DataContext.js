@@ -23,9 +23,9 @@ export const DataProvider = ({ children }) => {
             const filterData = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
             setLoading(false)
             setFetchError(false)
-            setPosts(filterData.reverse())
-           
+            setPosts(filterData)
         } catch (error) {
+            setFetchError(true)
             console.log(error)
         }
     }

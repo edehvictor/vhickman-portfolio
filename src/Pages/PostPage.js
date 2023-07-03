@@ -12,7 +12,6 @@ const PostPage = () => {
     const post = posts.find(post => (post.id).toString() === id);
 
     const user = auth?.currentUser?.uid
-    console.log(user)
 
     const handleDelete = async (id) => {
         try {
