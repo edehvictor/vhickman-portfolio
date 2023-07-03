@@ -4,7 +4,7 @@ const Footer = () => {
   const thisYear =new Date()
   return (
     <footer className='Footer'>
-      <p style={{fontStyle:'monospace'}}>  &copy; {thisYear.getFullYear()} created with 💖💖 by Vhickman .</p>
+      <p style={{fontStyle:'monospace'}}>  &copy; {thisYear.getFullYear()} created with 💖 by Vhickman.</p>
     </footer>
   )
 }

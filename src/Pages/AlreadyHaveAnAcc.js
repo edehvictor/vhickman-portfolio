@@ -1,16 +1,15 @@
 import React from 'react'
 import { auth, googleProvider } from '../Config/Firebase'
-import { signInWithPopup, createUserWithEmailAndPassword, } from 'firebase/auth'
+import { signInWithPopup,  signInWithEmailAndPassword } from 'firebase/auth'
 import { useNavigate, Link } from 'react-router-dom'
 import { useState } from 'react'
 
-const Login = () => {
+const AlreadyHaveAnAcc = () => {
     const navigate = useNavigate()
     const [emailRef, setEmailRef] = useState('')
     const [passwordRef, setPasswordRef] = useState('')
 
     const signInWithGoogle = async () => {
-
         try {
             await signInWithPopup(auth, googleProvider)
             alert('Youre being logged in')
@@ -20,9 +19,12 @@ const Login = () => {
         }
     }
 
-    async function createUser() {
+
+
+    async function signUserwithEmailAndPassword() {
         try {
-            await createUserWithEmailAndPassword(auth, emailRef, passwordRef);
+            alert('Youre being logged in')
+            await signInWithEmailAndPassword(auth, emailRef, passwordRef);
             navigate('/')
 
         } catch (error) {
@@ -32,10 +34,8 @@ const Login = () => {
     return (
         <div className='Login'>
             <div className="login-container">
-                <h2>Sign up</h2>
-                <button className="google-button" onClick={signInWithGoogle}>Sign in with Google</button>
+                <h2>Login</h2>
                 <input
-                    autoFocus
                     type="email"
                     required
                     className="email-input"
@@ -53,15 +53,16 @@ const Login = () => {
                     onChange={(e) => setPasswordRef(e.target.value)}
                 />
 
-                <button className="submit-button" onClick={createUser}>Login</button>
+                <button className="submit-button" onClick={signUserwithEmailAndPassword}>Login</button>
                 <div className="reset-password">
-                    <p >Have an account?
-                        <Link to='/login' style={{ color: "red" }}>Log in </Link>
+                    <p >Create new account?
+                        <Link to='/signup' style={{ color: "red" }}>Sign up</Link>
                     </p>
                 </div>
+            <button className="google-button" onClick={signInWithGoogle}>Sign in with Google</button>
             </div>
         </div>
     )
 }
 
-export default Login
+export default AlreadyHaveAnAcc
