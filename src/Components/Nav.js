@@ -1,45 +1,36 @@
-import { Link } from 'react-router-dom';
-import { useContext } from 'react';
+import React from 'react'
+import { useContext } from 'react'
 import DataContext from '../context/DataContext'
-import { auth } from '../Config/Firebase';
-import { signOut } from 'firebase/auth'
-
 
 const Nav = () => {
-    const { search, setSearch } = useContext(DataContext);
+  // const [dataId, setDataId] = useState('home')
+  const { activeLink, link } = useContext(DataContext)
 
-    const user = auth?.currentUser
+  // function activeLinkFn() {
+  //   activeLink(dataId)
+  //   setDataId(dataId)
+  // }
+  return (
 
-    const logOut = async () => {
-        try {
-            await signOut(auth)
-        } catch (error) {
-            console.log(error)
-        }
-    }
+    <div className="controls">
+      <div className={link === 'home' ? "control active-btn" : 'control'}  onClick={() => activeLink('home')}>
+        <i className="fas fa-home"></i>
+      </div>
 
-    return (
-        <nav className="Nav">
+      <div className={link === 'about' ? "control active-btn" : 'control'}  onClick={() => activeLink('about')}>
+        <i className="fas fa-user"></i>
+      </div>
 
-            <form className="searchForm" onSubmit={(e) => e.preventDefault()}>
-                <label htmlFor="search">Search Posts</label>
-                <input
-                    id="search"
-                    type="text"
-                    placeholder="Search Posts"
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                />
-            </form>
-            <ul>
-                <li><Link to="/">Home </Link></li>
-                <li><Link to="post">Post</Link></li>
-                <li><Link to="about">About</Link></li>
-                {!user ? <li><Link to="/signup">Login</Link></li> : <li><Link onClick={logOut}>Logout</Link></li>
-                }
-            </ul>
-        </nav>
-    )
+      <div className={link === 'portfolio' ? "control active-btn" : 'control'}  onClick={() => activeLink('portfolio')}>
+        <i className="fas fa-briefcase"></i>
+      </div>
+
+      <div className={link === 'contact' ? "control active-btn" : 'control'} onClick={() => activeLink('contact')}>
+        <i className="fas fa-envelope-open"></i>
+      </div>
+
+    </div>
+  )
 }
 
 export default Nav
