@@ -5,6 +5,10 @@
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 :root {
   --color-primary: #dbe1e8;
   --color-secondary: #1d9bf0;
@@ -113,7 +117,6 @@ section {
 .controls .control i {
   font-size: 1.2rem;
   color: var(--color-grey-2);
-  /* pointer-events: none; */
 }
 
 .controls .active-btn {
@@ -172,7 +175,6 @@ section {
   border: 10px inset #0b95f1;
   background: var(--color-grey-1);
   margin: auto;
-  /* padding: 15px 10px; */
 }
 
 .header-content .left-header .image img {
@@ -180,11 +182,11 @@ section {
   height: 100%;
   object-fit: cover;
   transition: all 0.4s ease-in-out;
-  filter: grayscale(100%);
+  filter: grayscale(0);
   border-radius: 10px;
 }
 .header-content .left-header .image img:hover {
-  filter: grayscale(0);
+  filter: grayscale(100%);
 }
 .header-content .right-header {
   display: flex;
@@ -269,11 +271,12 @@ section {
 
 .about-container .left-about p {
   line-height: 2rem;
-  padding: 1rem;
   color: var(--color-black);
 }
 
-
+.about-container .left-about .btn-con {
+  margin-top: 1rem;
+}
 .about-stats {
   padding-bottom: 4rem;
 }
@@ -453,6 +456,7 @@ section {
   margin: 0 1rem;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
+  list-style: none;
 }
 .portfolios .portfolio-item .hover-items .icons .icon i {
   font-size: 1.5rem;
@@ -511,7 +515,7 @@ section {
   display: flex;
   margin-top: 2rem;
 }
-.contact-content-con .left-contact .contact-icon p {
+.contact-content-con .left-contact .contact-icon a {
   display: flex;
   align-items: center;
   color: var(--color-white);
@@ -524,13 +528,13 @@ section {
   margin: 0 0.4rem;
   transition: all 0.4s ease-in-out;
 }
-.contact-content-con .left-contact .contact-icon p:hover {
+.contact-content-con .left-contact .contact-icon a:hover {
   background-color: var(--color-grey-2);
 }
-.contact-content-con .left-contact .contact-icon p:hover i {
+.contact-content-con .left-contact .contact-icon a:hover i {
   color: var(--color-white);
 }
-.contact-content-con .left-contact .contact-icon p i {
+.contact-content-con .left-contact .contact-icon a i {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -667,6 +671,7 @@ section {
   }
   .header-content {
     grid-template-columns: repeat(1, 1fr);
+    padding-bottom: 2rem;
   }
 
   .header-content .left-header {
@@ -746,10 +751,6 @@ section {
     margin-top: 1.5rem;
   }
 
-  .contact-content-con .right-contact {
-    margin-bottom: 6rem;
-  }
-
   .contact-item {
     flex-direction: column;
     margin: 1rem 0;
@@ -778,7 +779,7 @@ section {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    background-color:#dce3eb;
+    background-color: #dce3eb;
   }
   .controls .control {
     margin: 1rem 0.3rem;
@@ -826,7 +827,7 @@ section {
   }
 
   .contact-content-con .left-contact .contact-icon p {
-    margin: -100px 0.4rem;
+    /* margin: -50px 0.4rem; */
   }
   .contact-content-con .left-contact .contact-icon p i {
     font-size: 1rem;
@@ -834,6 +835,10 @@ section {
 
   .contact-container {
     padding-bottom: 0rem;
+  }
+
+  .contact-content-con .left-contact .contact-icon {
+    margin: top 1rem;
   }
 }
 

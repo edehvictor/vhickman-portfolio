@@ -23,13 +23,13 @@
                         <div className="hover-items">
                             <h3>Project Source</h3>
                             <div className="icons">
-                                <p href="https://github.com/edehvictor/E-commerce-App" className="icon">
+                                <a href="https://github.com/edehvictor/E-commerce-App" className="icon" target='blank'>
                                     <i className="fab fa-github"></i>
-                                </p>
-                                <p href="#" className="icon">
-                                    <p href="https://vicman-store.netlify.app" className="icon">
+                                </a>
+                                <p  className="icon">
+                                    <a href="https://vicman-store.netlify.app" className="icon" target='blank'>
                                         <i className="fas fa-external-link-alt "></i>
-                                    </p>
+                                    </a>
                                 </p>
 
                             </div>
@@ -42,12 +42,12 @@
                         <div className="hover-items">
                             <h3>Project Source</h3>
                             <div className="icons">
-                                <p href="https://github.com/edehvictor/Vhickman-Blog" className="icon">
+                                <a href="https://github.com/edehvictor/Vhickman-Blog" className="icon" target='blank'>
                                     <i className="fab fa-github"></i>
-                                </p>
-                                <p href="https://vhickman-blog.netlify.app/" className="icon">
+                                </a>
+                                <a href="https://vhickman-blog.netlify.app/" className="icon" target='blank'>
                                     <i className="fas fa-external-link-alt "></i>
-                                </p>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -58,12 +58,12 @@
                         <div className="hover-items">
                             <h3>Project Source</h3>
                             <div className="icons">
-                                <p href="https://github.com/edehvictor/TECHTOR" className="icon">
+                                <a href="https://github.com/edehvictor/TECHTOR" className="icon" target='blank'>
                                     <i className="fab fa-github"></i>
-                                </p>
-                                <p href="https://edehvictor.github.io/TECHTOR" className="icon">
+                                </a>
+                                <a href="https://edehvictor.github.io/TECHTOR" className="icon" target='blank'>
                                     <i className="fas fa-external-link-alt "></i>
-                                </p>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -74,13 +74,13 @@
                         <div className="hover-items">
                             <h3>Project Source</h3>
                             <div className="icons">
-                                <p href="https://github.com/edehvictor/Candy-Crush-Game" className="icon">
+                                <a href="https://github.com/edehvictor/Candy-Crush-Game" className="icon" target='blank'>
                                     <i className="fab fa-github"></i>
-                                </p>
-                                <p href="#" className="icon">
-                                    <p href="https://edehvictor.github.io/Candy-Crush-Game" className="icon">
+                                </a>
+                                <p className="icon">
+                                    <a href="https://edehvictor.github.io/Candy-Crush-Game" className="icon" target='blank'>
                                         <i className="fas fa-external-link-alt "></i>
-                                    </p>
+                                    </a>
                                 </p>
 
                             </div>
@@ -93,13 +93,13 @@
                         <div className="hover-items">
                             <h3>Project Source</h3>
                             <div className="icons">
-                                <p href="https://github.com/edehvictor/Weather-App" className="icon">
+                                <a href="https://github.com/edehvictor/Weather-App" className="icon" target='blank'>
                                     <i className="fab fa-github"></i>
-                                </p>
-                                <p href="#" className="icon">
-                                    <p href="https://edehvictor.github.io/Weather-App" className="icon">
+                                </a>
+                                <p  className="icons">
+                                    <a href="https://edehvictor.github.io/Weather-App" className="icon" target='blank'>
                                         <i className="fas fa-external-link-alt "></i>
-                                    </p>
+                                    </a>
                                 </p>
 
                             </div>
